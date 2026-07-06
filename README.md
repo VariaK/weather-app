@@ -21,6 +21,7 @@ This application is built using **Angular v21.2.0** (compatible with Angular 20/
 - **Total Forecast Records Counter**: Real-time display showing the count of loaded forecast records (e.g., `Total Forecast Records: 5`).
 - **Graceful State Management**: Visual feedback with interactive loading spinners, error alerts, and a dynamic **Retry Connection** mechanism if API calls fail.
 - **High-End Glassmorphism Styling**: Backdrop filters, gradient borders, subtle glows, and scale/rotation animations when hovering over cards.
+- **Temperature Highlighting**: Automatically highlights days with hot weather (temperatures exceeding 30°C) with a warm reddish glassmorphic gradient.
 
 ---
 

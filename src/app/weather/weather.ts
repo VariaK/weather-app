@@ -54,4 +54,8 @@ export class WeatherComponent implements OnInit {
     if (s.includes('thunder') || s.includes('storm')) return '⚡';
     return '🌡️';
   }
+
+  isHot(tempC: number): boolean {
+    return tempC > 30;
+  }
 }

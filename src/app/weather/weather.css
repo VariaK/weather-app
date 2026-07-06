@@ -275,3 +275,33 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* High Temperature (>30C) Highlight Styles */
+.forecast-card.hot-temp {
+  background: rgba(239, 68, 68, 0.06);
+  border-color: rgba(239, 68, 68, 0.25);
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.1);
+}
+
+.forecast-card.hot-temp:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 12px 30px rgba(239, 68, 68, 0.25);
+}
+
+.forecast-card.hot-temp .card-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.25), transparent 70%);
+}
+
+.forecast-card.hot-temp .summary-pill {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: #ff9494;
+}
+
+.forecast-card.hot-temp:hover .summary-pill {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #ffbaba;
+}
+

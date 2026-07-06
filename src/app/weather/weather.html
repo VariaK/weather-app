@@ -24,7 +24,7 @@
   } @else {
     <div class="forecast-grid">
       @for (forecast of forecasts(); track forecast.date) {
-        <div class="forecast-card">
+        <div class="forecast-card" [class.hot-temp]="isHot(forecast.temperatureC)">
           <div class="card-glow"></div>
           <div class="forecast-date">
             <span class="day">{{ forecast.date | date: 'EEEE' }}</span>

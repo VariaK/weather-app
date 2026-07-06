@@ -2,6 +2,9 @@
   <div class="weather-header">
     <h2>Weekly Forecast</h2>
     <p>Live meteorological updates from Azure API</p>
+    @if (!loading() && !error()) {
+      <div class="forecast-count">Total Forecast Records: {{ forecasts().length }}</div>
+    }
   </div>
 
   @if (loading()) {

@@ -16,6 +16,13 @@ This application is built using **Angular v21.2.0** (compatible with Angular 20/
 - **Modern Control Flow**: Uses native `@if`, `@else if`, `@else`, `@for`, and `@empty` block syntax for optimized DOM rendering.
 
 ---
+## Features:
+- **Live Weekly Forecast Grid**: Visual presentation of daily forecast details including dynamic weather emojis, temperature in Celsius/Fahrenheit, and weather summaries.
+- **Total Forecast Records Counter**: Real-time display showing the count of loaded forecast records (e.g., `Total Forecast Records: 5`).
+- **Graceful State Management**: Visual feedback with interactive loading spinners, error alerts, and a dynamic **Retry Connection** mechanism if API calls fail.
+- **High-End Glassmorphism Styling**: Backdrop filters, gradient borders, subtle glows, and scale/rotation animations when hovering over cards.
+
+---
 
 ## 🛠️ Installation Steps
 

@@ -1,0 +1,48 @@
+<div class="weather-container">
+  <div class="weather-header">
+    <h2>Weekly Forecast</h2>
+    <p>Live meteorological updates from Azure API</p>
+  </div>
+
+  @if (loading()) {
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Retrieving forecasts...</p>
+    </div>
+  } @else if (error()) {
+    <div class="error-state">
+      <div class="error-icon">⚠️</div>
+      <h3>Failed to Load Forecast</h3>
+      <p>{{ error() }}</p>
+      <button class="retry-btn" (click)="loadWeather()">
+        <span>🔄</span> Retry Connection
+      </button>
+    </div>
+  } @else {
+    <div class="forecast-grid">
+      @for (forecast of forecasts(); track forecast.date) {
+        <div class="forecast-card">
+          <div class="card-glow"></div>
+          <div class="forecast-date">
+            <span class="day">{{ forecast.date | date: 'EEEE' }}</span>
+            <span class="full-date">{{ forecast.date | date: 'MMMM d, y' }}</span>
+          </div>
+          <div class="weather-icon-container">
+            <span class="weather-emoji">{{ getWeatherIcon(forecast.summary) }}</span>
+          </div>
+          <div class="temp-section">
+            <span class="temp-c">{{ forecast.temperatureC }}°C</span>
+            <span class="temp-f">{{ forecast.temperatureF }}°F</span>
+          </div>
+          <div class="summary-pill">
+            <span>{{ forecast.summary }}</span>
+          </div>
+        </div>
+      } @empty {
+        <div class="empty-state">
+          <p>No weather forecasts available.</p>
+        </div>
+      }
+    </div>
+  }
+</div>

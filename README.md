@@ -22,6 +22,7 @@ This application is built using **Angular v21.2.0** (compatible with Angular 20/
 - **Graceful State Management**: Visual feedback with interactive loading spinners, error alerts, and a dynamic **Retry Connection** mechanism if API calls fail.
 - **High-End Glassmorphism Styling**: Backdrop filters, gradient borders, subtle glows, and scale/rotation animations when hovering over cards.
 - **Temperature Highlighting**: Automatically highlights days with hot weather (temperatures exceeding 30°C) with a warm reddish glassmorphic gradient.
+- **Refresh Data Button**: Allows users to manually reload the weekly weather forecast dynamically without refreshing the browser page.
 
 ---
 
@@ -65,3 +66,4 @@ Ensure you have the following installed:
 
 The application is configured to deploy via CI/CD workflows:
 - **Production Deployment URL** 
+`https://variak.github.io/weather-app/`

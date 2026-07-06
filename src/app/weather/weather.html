@@ -2,9 +2,14 @@
   <div class="weather-header">
     <h2>Weekly Forecast</h2>
     <p>Live meteorological updates from Azure API</p>
-    @if (!loading() && !error()) {
-      <div class="forecast-count">Total Forecast Records: {{ forecasts().length }}</div>
-    }
+    <div class="header-controls">
+      @if (!loading() && !error()) {
+        <span class="forecast-count">Total Forecast Records: {{ forecasts().length }}</span>
+      }
+      <button class="refresh-btn" (click)="loadWeather()" [disabled]="loading()">
+        <span>🔄</span> Refresh Data
+      </button>
+    </div>
   </div>
 
   @if (loading()) {

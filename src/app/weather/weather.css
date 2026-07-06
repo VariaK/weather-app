@@ -38,9 +38,17 @@
   margin-top: 0.5rem;
 }
 
+.header-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
 .forecast-count {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.5rem 1.2rem;
   background: rgba(255, 65, 248, 0.1);
   border: 1px solid rgba(255, 65, 248, 0.2);
@@ -50,6 +58,40 @@
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(255, 65, 248, 0.05);
 }
+
+.refresh-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  color: #f3f4f6;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 65, 248, 0.4);
+  color: #ff86fa;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 65, 248, 0.15);
+}
+
+.refresh-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 
 /* Forecast Grid */
 .forecast-grid {
